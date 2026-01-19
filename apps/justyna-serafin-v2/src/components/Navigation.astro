@@ -1,6 +1,8 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const navItems = [
-  { name: 'Start', href: '/' },
+  { name: 'Start', href: base },
   { name: 'O mnie', href: '#o-mnie' },
   { name: 'Specjalizacja', href: '#specjalizacja' },
   { name: 'Cennik', href: '#cennik' },
@@ -11,7 +13,7 @@ const navItems = [
 <nav class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200">
   <div class="max-w-7xl mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
-      <a href="/" class="text-2xl font-semibold tracking-tight">
+      <a href={base} class="text-2xl font-semibold tracking-tight">
         Justyna Serafin
       </a>
 

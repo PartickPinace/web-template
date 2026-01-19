@@ -1,19 +1,21 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const navItems = [
-  { name: 'Start', href: '/' },
-  { name: 'O mnie', href: '/#o-mnie' },
-  { name: 'Usługi', href: '/#uslugi' },
-  { name: 'Cennik', href: '/cennik' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Aktualności', href: '/aktualnosci' },
-  { name: 'Kontakt', href: '/#kontakt' },
+  { name: 'Start', href: base },
+  { name: 'O mnie', href: `${base}#o-mnie` },
+  { name: 'Usługi', href: `${base}#uslugi` },
+  { name: 'Cennik', href: `${base}cennik` },
+  { name: 'Blog', href: `${base}blog` },
+  { name: 'Aktualności', href: `${base}aktualnosci` },
+  { name: 'Kontakt', href: `${base}#kontakt` },
 ];
 ---
 
 <nav class="bg-white shadow-md fixed w-full top-0 z-50">
   <div class="container mx-auto px-4 py-4">
     <div class="flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold text-blue-600">
+      <a href={base} class="text-2xl font-bold text-blue-600">
         Justyna Serafin
       </a>
 

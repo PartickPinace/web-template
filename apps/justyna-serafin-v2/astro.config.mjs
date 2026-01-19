@@ -7,7 +7,7 @@ const base = process.env.BASE_PATH || '/';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://partickpinace.github.io',
+  site: 'https://patrickpinace.github.io',
   base: base,
   vite: {
     plugins: [tailwindcss()]
