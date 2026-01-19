@@ -1,0 +1,41 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- About -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Justyna Serafin</h3>
+        <p class="text-gray-400">
+          Specjalista ortodoncji dzieci i dorosłych
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Szybkie linki</h3>
+        <ul class="space-y-2">
+          <li><a href="/#o-mnie" class="text-gray-400 hover:text-white transition-colors">O mnie</a></li>
+          <li><a href="/#uslugi" class="text-gray-400 hover:text-white transition-colors">Usługi</a></li>
+          <li><a href="/cennik" class="text-gray-400 hover:text-white transition-colors">Cennik</a></li>
+          <li><a href="/blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Kontakt</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li>Email: kontakt@justynaserafin.pl</li>
+          <li>Telefon: +48 XXX XXX XXX</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; {currentYear} Justyna Serafin. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </div>
+</footer>

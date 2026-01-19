@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+// Przykładowe aktualności
+type NewsType = 'Ogłoszenie' | 'Edukacja' | 'Promocja' | 'Konferencja';
+
+const news: Array<{
+  id: number;
+  title: string;
+  content: string;
+  date: string;
+  type: NewsType;
+}> = [
+  {
+    id: 1,
+    title: 'Nowe godziny przyjęć od lutego 2026',
+    content: 'Od 1 lutego 2026 wprowadzamy rozszerzone godziny przyjęć. Gabinet będzie czynny także w soboty w godzinach 9:00-14:00.',
+    date: '2026-01-18',
+    type: 'Ogłoszenie'
+  },
+  {
+    id: 2,
+    title: 'Ukończenie kursu Master of Clinical Orthodontics',
+    content: 'Z przyjemnością informuję, że kontynuuję program Master of Clinical Orthodontics, pogłębiając swoje kompetencje w zakresie zaawansowanych technik ortodontycznych.',
+    date: '2026-01-12',
+    type: 'Edukacja'
+  },
+  {
+    id: 3,
+    title: 'Promocja na konsultacje ortodontyczne',
+    content: 'W styczniu oferujemy promocyjną cenę konsultacji ortodontycznej dla nowych pacjentów. Skontaktuj się z nami, aby umówić wizytę.',
+    date: '2026-01-05',
+    type: 'Promocja'
+  },
+  {
+    id: 4,
+    title: 'Udział w międzynarodowej konferencji ortodontycznej',
+    content: 'Brałam udział w międzynarodowej konferencji ortodontycznej, gdzie prezentowano najnowsze osiągnięcia w dziedzinie leczenia ortodontycznego.',
+    date: '2025-12-15',
+    type: 'Konferencja'
+  },
+];
+
+const typeColors: Record<NewsType, string> = {
+  'Ogłoszenie': 'bg-blue-100 text-blue-800',
+  'Edukacja': 'bg-green-100 text-green-800',
+  'Promocja': 'bg-purple-100 text-purple-800',
+  'Konferencja': 'bg-orange-100 text-orange-800',
+};
+---
+
+<Layout title="Aktualności - Justyna Serafin Ortodonta" description="Najnowsze informacje i aktualności z gabinetu">
+  <Navigation />
+
+  <main class="pt-24 pb-16 min-h-screen bg-gray-50">
+    <div class="container mx-auto px-4 py-12">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-5xl font-bold text-center mb-6 text-gray-900">Aktualności</h1>
+        <p class="text-center text-gray-600 mb-12 text-lg">
+          Bądź na bieżąco z najnowszymi informacjami z gabinetu
+        </p>
+
+        <div class="space-y-6">
+          {news.map((item) => (
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+              <div class="p-6 md:p-8">
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mb-4">
+                  <span class={`px-3 py-1 rounded-full text-sm font-semibold ${typeColors[item.type as NewsType]}`}>
+                    {item.type}
+                  </span>
+                  <time class="text-sm text-gray-500">
+                    {new Date(item.date).toLocaleDateString('pl-PL', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </time>
+                </div>
+
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  {item.title}
+                </h2>
+
+                <p class="text-gray-700 leading-relaxed text-lg">
+                  {item.content}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div class="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Masz pytania?</h2>
+          <p class="text-gray-600 mb-6">
+            Jeśli masz pytania dotyczące aktualności lub chcesz umówić się na wizytę, skontaktuj się z nami
+          </p>
+          <a href="/#kontakt" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-semibold">
+            Skontaktuj się
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
