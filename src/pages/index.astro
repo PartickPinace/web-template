@@ -17,15 +17,15 @@ const base = import.meta.env.BASE_URL;
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-center md:text-left">
             Justyna Serafin
           </h1>
-          <p class="text-2xl text-gray-700 mb-4">Lekarz dentysta</p>
-          <p class="text-lg text-gray-600 mb-8">
+          <p class="text-2xl text-gray-700 mb-4 text-center md:text-left">Lekarz dentysta</p>
+          <p class="text-lg text-gray-600 mb-8 text-center md:text-left">
             Leczenie ortodontyczne dzieci oraz dorosłych. Aparaty stałe, ruchome
             oraz alignery.
           </p>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start">
             <a
               href="#kontakt"
               class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
@@ -41,7 +41,7 @@ const base = import.meta.env.BASE_URL;
           </div>
 
           <!-- Social Links -->
-          <div class="flex gap-4 mt-6">
+          <div class="flex gap-4 mt-6 justify-center md:justify-start">
             <a
               href="https://www.instagram.com/dr_justyna_serafin/"
               target="_blank"
@@ -91,14 +91,14 @@ const base = import.meta.env.BASE_URL;
           O mnie
         </h2>
 
-        <div class="space-y-6 text-gray-700 leading-relaxed">
+        <div class="space-y-6 text-gray-700 leading-relaxed text-justify">
           <p class="text-lg">
             Zajmuję się leczeniem ortodontycznym dzieci oraz dorosłych. W swojej
             pracy wykorzystuję aparaty stałe, ruchome oraz alignery - aparaty
             nakładkowe.
           </p>
 
-          <p class="text-lg">
+          <p class="text-lg text-center md:text-left">
             <strong class="text-gray-900"
               >Moją ulubioną dziedziną stomatologii jest ortodoncja dziecięca.</strong>
           </p>
@@ -158,10 +158,10 @@ const base = import.meta.env.BASE_URL;
           <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <!-- Service 1 -->
             <div
-              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center md:text-left"
             >
               <div
-                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0"
               >
                 <svg
                   class="w-8 h-8 text-blue-600"
@@ -189,10 +189,10 @@ const base = import.meta.env.BASE_URL;
 
             <!-- Service 2 -->
             <div
-              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center md:text-left"
             >
               <div
-                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0"
               >
                 <svg
                   class="w-8 h-8 text-blue-600"
@@ -219,10 +219,10 @@ const base = import.meta.env.BASE_URL;
 
             <!-- Service 3 -->
             <div
-              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center md:text-left"
             >
               <div
-                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0"
               >
                 <svg
                   class="w-8 h-8 text-blue-600"
@@ -384,7 +384,7 @@ const base = import.meta.env.BASE_URL;
         </div>
 
         <div class="mt-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Informacje dodatkowe</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-3 text-center md:text-left">Informacje dodatkowe</h3>
           <ul class="space-y-2 text-gray-700">
             <li>• Ceny podane są w złotych polskich (PLN)</li>
             <li>• Pierwsza konsultacja ortodontyczna pozwala na ocenę sytuacji i zaproponowanie planu leczenia</li>
@@ -472,7 +472,7 @@ const base = import.meta.env.BASE_URL;
               class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-lg"
             >
               <div class="space-y-6">
-                <div class="flex items-start gap-4">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
                   <div
                     class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0"
                   >
@@ -503,7 +503,7 @@ const base = import.meta.env.BASE_URL;
                   </div>
                 </div>
 
-                <div class="flex items-start gap-4">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
                   <div
                     class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0"
                   >
@@ -536,7 +536,7 @@ const base = import.meta.env.BASE_URL;
                   </div>
                 </div>
 
-                <div class="flex items-start gap-4">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
                   <div
                     class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0"
                   >
